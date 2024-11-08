@@ -8,7 +8,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         test();
-        System.out.print(findLongestSubsequenceWithDifferentElements(ArrayUtils.readIntArrayFromConsole()));
+        System.out.print(Arrays.toString(findLongestSubsequenceWithDifferentElements(ArrayUtils.readIntArrayFromConsole())));
     }
 
     public static int[] findLongestSubsequenceWithDifferentElements(int[] lst) {
@@ -17,12 +17,12 @@ public class Main {
         int r = 1;
         int l = 0;
         for (; r <= lst.length; r++) {
-            int [] currentSlice = listSlice(lst, l, r);
+            int[] currentSlice = listSlice(lst, l, r);
             while (isRepeatingElExists(currentSlice)) {
                 l += 1;
-                currentSlice = listSlice(lst, l ,r);
+                currentSlice = listSlice(lst, l, r);
             }
-             if (r - l >= maxLength) {
+            if (r - l >= maxLength) {
                 firstSubsequenceEl = l;
                 maxLength = r - l;
             }
@@ -30,28 +30,28 @@ public class Main {
         return new int[]{firstSubsequenceEl, maxLength};
     }
 
-    public static boolean isRepeatingElExists(int[] lstSlice){
-        int newEl = lstSlice[lstSlice.length-1];
-        for (int i = 0; i<lstSlice.length-1; i++){
+    public static boolean isRepeatingElExists(int[] lstSlice) {
+        int newEl = lstSlice[lstSlice.length - 1];
+        for (int i = 0; i < lstSlice.length - 1; i++) {
             int el = lstSlice[i];
-            if (el==newEl){
+            if (el == newEl) {
                 return true;
             }
         }
-    return false;
+        return false;
     }
 
     public static int[] listSlice(int[] lst, int l, int r) {
-        int[] slice = new int[r-l];
-        for (int i = 0; r-l>i; i++) {
-            slice[i] = lst[l+i];
+        int[] slice = new int[r - l];
+        for (int i = 0; r - l > i; i++) {
+            slice[i] = lst[l + i];
         }
         return slice;
     }
 
-    public static void test(){
+    public static void test() {
         System.out.println("1,2,3,1,4");
-        System.out.println(Arrays.toString(findLongestSubsequenceWithDifferentElements(new int[]{1,2,3,1,4})));
+        System.out.println(Arrays.toString(findLongestSubsequenceWithDifferentElements(new int[]{1, 2, 3, 1, 4})));
 
         System.out.println("1,2,2,3,4,2,2,11");
         System.out.println(Arrays.toString(findLongestSubsequenceWithDifferentElements(new int[]{1, 2, 2, 3, 4, 2, 2, 1})));
