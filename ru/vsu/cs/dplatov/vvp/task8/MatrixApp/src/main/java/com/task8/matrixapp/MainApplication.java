@@ -1,21 +1,30 @@
 package com.task8.matrixapp;
 
+import com.task8.matrixapp.utils.ArrayUtils;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Random;
 
 import static com.task8.matrixapp.utils.ArrayUtils.readIntArray2FromFile;
+import static com.task8.matrixapp.utils.ArrayUtils.writeArrayToFile;
 
 public class MainApplication extends Application {
-
     private GridPane inpMatrixGrid = new GridPane();
     private GridPane outMatrixGrid = new GridPane();
     private int rows = 3;
@@ -27,9 +36,10 @@ public class MainApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        // Создание основных элементов интерфейса для inp
         Label labelInp = new Label("Входные данные");
         labelInp.setLabelFor(inpMatrixGrid);
-        labelInp.setFont(Font.font("Arial", 30));
+        labelInp.getStyleClass().add("labelInp");
         Button addRowButton = new Button("+ Строка");
         Button removeRowButton = new Button("- Строка");
         Button addColButton = new Button("+ Столбец");
@@ -37,13 +47,14 @@ public class MainApplication extends Application {
         Button randomizeMatrixButton = new Button("Заполнить случайными");
         Button loadMatrixFromFile = new Button("Матрица из файла");
 
+        // Создание основных элементов интерфейса для out
         Label labelOut = new Label("Выходная таблица");
         labelOut.setLabelFor(outMatrixGrid);
-        labelOut.setLabelFor(inpMatrixGrid);
-        labelOut.setFont(Font.font("Arial", 30));
+        labelOut.getStyleClass().add("labelOut");
         Button solveTheTask = new Button("Сформировать");
         CheckBox saveInTxtFile = new CheckBox("Сохранять в txt файл");
 
+        // listeners
         addRowButton.setOnAction(e -> addRow());
         removeRowButton.setOnAction(e -> removeRow());
         addColButton.setOnAction(e -> addColumn());
@@ -51,30 +62,59 @@ public class MainApplication extends Application {
         randomizeMatrixButton.setOnAction(e -> randomizeMatrix());
         loadMatrixFromFile.setOnAction(e -> addMatrixFromFile());
 
+        // listener for every cell in inpMatrixGrid
         solveTheTask.setOnAction(e -> updateMatrixOut(saveInTxtFile.isSelected()));
 
+        // Панели инструментов и для inp и для out
         ToolBar toolBarInp = new ToolBar(addRowButton, removeRowButton, addColButton, removeColButton, randomizeMatrixButton, loadMatrixFromFile);
+        toolBarInp.getStyleClass().add("toolbarIn");
         ToolBar toolBarOut = new ToolBar(solveTheTask, saveInTxtFile);
+        toolBarOut.getStyleClass().add("toolbarOut");
 
+        // инициализация таблицы по умолчанию
         updateMatrixGrid(new int[rows][cols]);
 
+        // служебный объект для управления размерами элементов(VBox в основном)
+        Screen screen = Screen.getPrimary();
 
+        // VBox inp settings
         VBox inpRoot = new VBox(labelInp, toolBarInp, inpMatrixGrid);
-        VBox outRoot = new VBox(labelOut, toolBarOut, outMatrixGrid);
-        VBox mainRoot = new VBox(15);
-        mainRoot.getChildren().addAll(inpRoot, outRoot);
-        Scene scene = new Scene(mainRoot, 800, 600);
+        inpRoot.getStyleClass().add("inpRoot");
+        inpRoot.setMaxHeight(screen.getVisualBounds().getHeight() / 2);
+        VBox.setVgrow(inpRoot, Priority.ALWAYS);
 
+        // VBox out settings
+        VBox outRoot = new VBox(labelOut, toolBarOut, outMatrixGrid);
+        outRoot.getStyleClass().add("outRoot");
+        outRoot.setMaxHeight(screen.getVisualBounds().getHeight() / 2);
+        VBox.setVgrow(outRoot, Priority.ALWAYS);
+
+        // Vbox main settings
+        VBox mainRoot = new VBox();
+        mainRoot.getStyleClass().add("mainRoot");
+        mainRoot.getChildren().addAll(inpRoot, outRoot);
+
+        // scene and settings + loading css
+        Scene scene = new Scene(mainRoot);
+        scene.getStylesheets().add(getClass().getResource("/stylesCss/main.css").toExternalForm());
+
+        // primaryStage settings
         primaryStage.setTitle("Matrix App");
+        primaryStage.setMaximized(true);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
 
-    //    Блок для работы с вводом пользователя
+
+    // listeners realization
     private void addRow() {
         int[][] currentInp = parseMatrixGrid();
-        rows++;
-        updateMatrixGrid(currentInp);
+        if (rows >= 15) {
+            showErrorAlert("Максимально поддерживаемое количество строк - 15.");
+        } else {
+            rows++;
+            updateMatrixGrid(currentInp);
+        }
     }
 
     private void removeRow() {
@@ -87,8 +127,12 @@ public class MainApplication extends Application {
 
     private void addColumn() {
         int[][] currentInp = parseMatrixGrid();
-        cols++;
-        updateMatrixGrid(currentInp);
+        if (cols >= 30) {
+            showErrorAlert("Максимально поддерживаемое количество cтолбцов - 30.");
+        } else {
+            cols++;
+            updateMatrixGrid(currentInp);
+        }
     }
 
     private void removeColumn() {
@@ -131,8 +175,12 @@ public class MainApplication extends Application {
             try {
                 int[][] matrixFromFile = readIntArray2FromFile(file.getAbsolutePath());
                 if (matrixFromFile.length > 0 && matrixFromFile[0].length > 0) {
-                    rows = matrixFromFile.length;
-                    cols = matrixFromFile[0].length;
+                    if (matrixFromFile.length > 15 || matrixFromFile[0].length > 30) {
+                        showErrorAlert("Слишком большая матрица. Максимально поддерживаемое количество строк - 15. Максимально поддерживаемое количество cтолбцов - 30.");
+                    } else {
+                        rows = matrixFromFile.length;
+                        cols = matrixFromFile[0].length;
+                    }
                 } else {
                     throw new IllegalArgumentException("Матрица не должна быть пустой!");
                 }
@@ -160,11 +208,19 @@ public class MainApplication extends Application {
                 } catch (IndexOutOfBoundsException e) {
                     cell.setText("0");
                 }
+                cell.textProperty().addListener(e -> {
+                    outMatrixGrid.getChildren().clear();
+                });
                 inpMatrixGrid.add(cell, j, i);
             }
         }
     }
 
+    /**
+     * Обновляет текущую таблицу вывода, получая данные из Solver, где прописана вся логика обработки.
+     * Сохраняет данные в папку(outputFiles), лежащую в корне проекта под названием, состоящим из данных времени создания. Это
+     * происходит если стоит галочка CheckBox saveInTxtFile.
+     */
     private void updateMatrixOut(boolean isSave) {
         int[][] matrixOut = Solver.solve(parseMatrixGrid());
         outMatrixGrid.getChildren().clear();
@@ -176,7 +232,22 @@ public class MainApplication extends Application {
                 } catch (IndexOutOfBoundsException e) {
                     cell.setText("0");
                 }
+                cell.setEditable(false);
+                cell.setFocusTraversable(false);
                 outMatrixGrid.add(cell, j, i);
+            }
+        }
+        if (isSave) {
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
+            String dateTimeString = sdf.format(new Date());
+            String fileName = "matrix_" + dateTimeString + ".txt";
+            String folderPath = "outputFiles";
+            Path filePath = Paths.get(folderPath, fileName);
+            try {
+                Files.createFile(filePath);
+                writeArrayToFile(filePath.toString(), matrixOut);
+            } catch (IOException e) {
+                showErrorAlert("Директория для записи не была найдена.");
             }
         }
     }
@@ -227,7 +298,7 @@ public class MainApplication extends Application {
      */
     private void showErrorAlert(String errorText) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Ошибка");
+        alert.setTitle("ErrorAlert");
         alert.setHeaderText("Произошла ошибка");
         alert.setContentText(errorText);
         alert.showAndWait();
