@@ -1,10 +1,6 @@
-package task7;
+package ru.vsu.cs.dplatov.vvp.task7;
 
-import task7.util.ArrayUtils;
-
-import java.security.PublicKey;
-import java.util.*;
-
+import ru.vsu.cs.dplatov.vvp.task7.util.ArrayUtils;
 
 public class Main {
     public static void main(String[] args) {

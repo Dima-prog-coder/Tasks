@@ -5,6 +5,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -26,6 +27,9 @@ public class MainApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        Label labelInp = new Label("Входные данные");
+        labelInp.setLabelFor(inpMatrixGrid);
+        labelInp.setFont(Font.font("Arial", 30));
         Button addRowButton = new Button("+ Строка");
         Button removeRowButton = new Button("- Строка");
         Button addColButton = new Button("+ Столбец");
@@ -33,7 +37,11 @@ public class MainApplication extends Application {
         Button randomizeMatrixButton = new Button("Заполнить случайными");
         Button loadMatrixFromFile = new Button("Матрица из файла");
 
-        Button solveTheTask = new Button("Выполнить");
+        Label labelOut = new Label("Выходная таблица");
+        labelOut.setLabelFor(outMatrixGrid);
+        labelOut.setLabelFor(inpMatrixGrid);
+        labelOut.setFont(Font.font("Arial", 30));
+        Button solveTheTask = new Button("Сформировать");
         CheckBox saveInTxtFile = new CheckBox("Сохранять в txt файл");
 
         addRowButton.setOnAction(e -> addRow());
@@ -51,8 +59,8 @@ public class MainApplication extends Application {
         updateMatrixGrid(new int[rows][cols]);
 
 
-        VBox inpRoot = new VBox(toolBarInp, inpMatrixGrid);
-        VBox outRoot = new VBox(toolBarOut, outMatrixGrid);
+        VBox inpRoot = new VBox(labelInp, toolBarInp, inpMatrixGrid);
+        VBox outRoot = new VBox(labelOut, toolBarOut, outMatrixGrid);
         VBox mainRoot = new VBox(15);
         mainRoot.getChildren().addAll(inpRoot, outRoot);
         Scene scene = new Scene(mainRoot, 800, 600);
@@ -143,6 +151,7 @@ public class MainApplication extends Application {
      */
     private void updateMatrixGrid(int[][] currentInp) {
         inpMatrixGrid.getChildren().clear();
+        outMatrixGrid.getChildren().clear();
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 TextField cell = new TextField();
@@ -158,7 +167,7 @@ public class MainApplication extends Application {
 
     private void updateMatrixOut(boolean isSave) {
         int[][] matrixOut = Solver.solve(parseMatrixGrid());
-
+        outMatrixGrid.getChildren().clear();
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 TextField cell = new TextField();
@@ -167,7 +176,7 @@ public class MainApplication extends Application {
                 } catch (IndexOutOfBoundsException e) {
                     cell.setText("0");
                 }
-                inpMatrixGrid.add(cell, j, i);
+                outMatrixGrid.add(cell, j, i);
             }
         }
     }
