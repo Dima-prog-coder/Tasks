@@ -1,0 +1,5 @@
+structure type - MVC. Model(Solve), View(MyView), Controller(MyController)
+
+Model - logic of the app(digits and more) : returns logic methods
+View - only UI : returns main(root) HBox or HBox
+Controller - links View and Model, adds listeners : returns nothing, sets listeners for view and uses model funcs for it

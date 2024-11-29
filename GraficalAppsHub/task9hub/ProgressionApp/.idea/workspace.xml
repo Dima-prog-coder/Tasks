@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dc2611db-8733-4c73-b59d-ede3f086b7ee" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../Array1Samples/Array1Samples.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Array1Samples/Array1Samples/Array1Samples.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/.idea/task8.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/.idea/MatrixApp.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/src/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/src/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/src/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/src/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/src/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/src/main/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/src/main/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/src/main/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/src/main/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/src/main/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/src/main/java/com/task8/matrixapp/FriendsInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/src/main/java/com/task8/matrixapp/FriendsInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/src/main/java/com/task8/matrixapp/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/src/main/java/com/task8/matrixapp/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/src/main/java/com/task8/matrixapp/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/src/main/java/com/task8/matrixapp/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/src/main/java/com/task8/matrixapp/Solver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/src/main/java/com/task8/matrixapp/Solver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/target/MatrixApp-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/target/MatrixApp-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/target/MatrixApp-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/target/MatrixApp-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/target/classes/com/task8/matrixapp/FriendsInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/target/classes/com/task8/matrixapp/FriendsInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/target/classes/com/task8/matrixapp/MainApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/target/classes/com/task8/matrixapp/MainApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/target/classes/com/task8/matrixapp/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/target/classes/com/task8/matrixapp/Program.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/target/classes/com/task8/matrixapp/Solver.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/target/classes/com/task8/matrixapp/Solver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GraficalApps/task8/MatrixApp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/outputFiles/matrix_2024-11-16_12-29-52.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/outputFiles/matrix_2024-11-16_12-30-04.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/outputFiles/matrix_2024-11-16_12-32-49.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/outputFiles/matrix_2024-11-16_12-34-36.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/outputFiles/matrix_2024-11-16_19-07-56.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/outputFiles/matrix_2024-11-16_19-09-04.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/outputFiles/matrix_2024-11-16_19-09-33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/outputFiles/matrix_2024-11-16_19-10-32.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/outputFiles/matrix_2024-11-16_19-10-34.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/outputFiles/matrix_2024-11-16_19-11-11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/outputFiles/matrix_2024-11-16_19-12-12.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/outputFiles/matrix_2024-11-16_19-13-45.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/outputFiles/matrix_2024-11-16_19-37-48.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/outputFiles/matrix_2024-11-16_19-38-07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/outputFiles/matrix_2024-11-16_19-38-09.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task8/outputFiles/matrix_2024-11-16_19-38-39.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task9/ProgressionApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GraficalApps/task9/ProgressionApp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task9/ProgressionApp/src/main/java/com/ru/vsu/cs/dplatov/vvp/task9/progressionapp/ProgressionApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GraficalApps/task9/ProgressionApp/src/main/java/com/ru/vsu/cs/dplatov/vvp/task9/progressionapp/ProgressionApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task9/ProgressionApp/src/main/java/com/ru/vsu/cs/dplatov/vvp/task9/progressionapp/Solver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GraficalApps/task9/ProgressionApp/src/main/java/com/ru/vsu/cs/dplatov/vvp/task9/progressionapp/Solver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task9/ProgressionApp/src/main/java/com/ru/vsu/cs/dplatov/vvp/task9/progressionapp/utils/ListUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GraficalApps/task9/ProgressionApp/src/main/java/com/ru/vsu/cs/dplatov/vvp/task9/progressionapp/utils/ListUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GraficalApps/task9/ProgressionApp/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GraficalApps/task9/ProgressionApp/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ru/out/production/ru/ru/vsu/cs/dplatov/vvp/task7/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ru/out/production/ru/ru/vsu/cs/dplatov/vvp/task7/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ru/ru.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ru/ru.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ru/vsu/cs/dplatov/vvp/task7/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ru/vsu/cs/dplatov/vvp/task7/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ru/vsu/cs/dplatov/vvp/task8/MatrixApp/src/main/java/com/task8/matrixapp/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ru/vsu/cs/dplatov/vvp/task8/MatrixApp/src/main/java/com/task8/matrixapp/MainApplication.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2p74qb1LSftZE5Agv3KTn1x9aZr" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="compactDirectories" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ProgressionApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;graficalAppsHub&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/VSU/programming/GraficalAppsHub/task9hub/ProgressionApp&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\VSU\Программирование\GraficalApps\ProgressionApp\src\main\java\com\ru\vsu\cs\dplatov\vvp\task9\progressionapp" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\VSU\programming\GraficalAppsHub\task9hub\ProgressionApp\src\main\resources\img\tits1" />
+      <recent name="E:\VSU\programming\GraficalAppsHub\task9hub\ProgressionApp\src\main\resources\img" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ru.vsu.cs.dplatov.vvp.task9.progressionapp" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ProgressionApplication">
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ru.vsu.cs.dplatov.vvp.task9.progressionapp.HelloApplication" />
+      <module name="ProgressionApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ru.vsu.cs.dplatov.vvp.task9.progressionapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProgressionApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ru.vsu.cs.dplatov.vvp.task9.progressionapp.ProgressionApplication" />
+      <module name="ProgressionApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ru.vsu.cs.dplatov.vvp.task9.progressionapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ProgressionApplication" />
+        <item itemvalue="Application.HelloApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dc2611db-8733-4c73-b59d-ede3f086b7ee" name="Changes" comment="" />
+      <created>1732103975078</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732103975078</updated>
+    </task>
+    <servers />
+  </component>
+</project>

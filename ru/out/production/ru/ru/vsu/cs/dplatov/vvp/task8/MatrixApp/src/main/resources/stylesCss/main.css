@@ -1,0 +1,52 @@
+.mainRoot {
+}
+
+.labelInp {
+    -fx-font-size: 30px;
+    -fx-alignment: center;
+    -fx-background-color: #84e090;
+    -fx-pref-width: Infinity;
+}
+
+.labelOut {
+    -fx-font-size: 30px;
+    -fx-alignment: center;
+    -fx-background-color: #e0849c;
+    -fx-pref-width: Infinity;
+}
+
+.toolbarIn { 
+    -fx-background-color: #84e090;
+    -fx-pref-height: 40px;
+    -fx-alignment: center;  /* Центрируем элементы по вертикали */
+    -fx-spacing: 30px;
+}
+
+.toolbarOut {
+    -fx-background-color: #e0849c;
+    -fx-pref-height: 40px;
+    -fx-alignment: center;  /* Центрируем элементы по вертикали */
+    -fx-spacing: 20px;
+}
+
+.inpRoot {
+    -fx-border-color: #000000;        /* Цвет границы (черный) */
+    -fx-border-width: 1px;            /* Толщина границы */
+    -fx-border-style: solid;          /* Стиль границы (сплошная) */
+    -fx-border-radius: 0px;           /* Скругление углов */
+    -fx-padding: 0px;                /* Отступы внутри VBox */
+    -fx-padding-bottom: 3px;
+    -fx-background-color: rgb(191, 228, 196);
+}
+
+.outRoot {
+    -fx-margin-top: 10px;
+    -fx-border-color: #000000;        /* Цвет границы (черный) */
+    -fx-border-width: 1px;            /* Толщина границы */
+    -fx-border-style: solid;          /* Стиль границы (сплошная) */
+    -fx-border-radius: 0px;           /* Скругление углов */
+    -fx-padding: 0px;                /* Отступы внутри VBox */
+    -fx-padding-bottom: 3px;
+    -fx-background-color: #e9b8c5;
+}
+

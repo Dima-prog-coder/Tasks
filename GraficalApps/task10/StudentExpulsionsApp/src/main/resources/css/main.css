@@ -1,0 +1,13 @@
+.studentBox {
+    -fx-spacing: 20pt;
+    -fx-alignment: center;
+    -fx-border-style: solid;
+    -fx-border-color: black;
+}
+
+.verticalToolbar {
+    -fx-background-color: #CFB53B;
+}
+
+.inputStudentsBox {
+}
