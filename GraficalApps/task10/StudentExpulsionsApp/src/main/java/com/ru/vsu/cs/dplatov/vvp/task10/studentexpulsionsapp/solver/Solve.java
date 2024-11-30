@@ -11,41 +11,20 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Solve {
-    public static void test(String[] args) {
+    public static void test() {
         List<Student> students = Arrays.asList(
                 new Student("Dima", 1, 88),
-                new Student("Anastasia", 2, 100),
-                new Student("Alex", 2, 95),
-                new Student("Maria", 3, 92),
-                new Student("Igor", 4, 76),
-                new Student("Oksana", 5, 84),
-                new Student("Sasha", 6, 90),
-                new Student("Anna", 2, 99),
-                new Student("Ivan", 1, 85),
-                new Student("Katya", 3, 89),
-                new Student("Petr", 4, 78),
-                new Student("Olga", 5, 82),
-                new Student("Artem", 2, 89),
-                new Student("Sofia", 3, 97),
-                new Student("Maxim", 1, 76),
-                new Student("Alina", 5, 91),
-                new Student("Roman", 1, 85),
-                new Student("Liza", 4, 93),
-                new Student("Kirill", 2, 80),
-                new Student("Veronika", 1, 88),
-                new Student("Nikita", 3, 82),
-                new Student("Polina", 3, 95),
-                new Student("Vlad", 5, 77),
-                new Student("Yana", 2, 99)
+                new Student("Anastasia", 1, 50)
         );
-        for (List<Student> list : sortByCourses(students)) {
-            System.out.println(list);
-        }
+//        for (List<Student> list : sortByCourses(students)) {
+//            System.out.println(list);
+//        }
         System.out.println();
-        for (Student student : expelStudents(students, 85, 3)) {
+        for (Student student : expelStudents(students, 85, 1)) {
             System.out.println(student);
         }
     }
+
 
     public static List<Student> expelStudents(List<Student> studentsList, int minAvgPoint, int keepCnt) {
         List<List<Student>> studentsListSortedByCourses = sortByCourses(studentsList);

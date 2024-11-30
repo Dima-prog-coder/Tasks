@@ -20,9 +20,12 @@ public class MyView {
     // Малые элементы
     private Button addStudentButton;
     private Button removeLastStudentButton;
+    private Button addStudentsFromFileButton;
     private Button solveButton;
     private Spinner<Integer> leaveStudentsCnt;
-    private TextField requiredAVGPoint;
+    private Label labelForLeaveStudentsCnt;
+    private Spinner<Integer> requiredAVGPoint;
+    private Label labelForRequiredAVGPoint;
 
     // Инициализация интерфейса
     public MyView() {
@@ -66,7 +69,7 @@ public class MyView {
         return leaveStudentsCnt;
     }
 
-    public TextField getRequiredAVGPoint() {
+    public Spinner<Integer> getRequiredAVGPoint() {
         return requiredAVGPoint;
     }
 
@@ -97,15 +100,21 @@ public class MyView {
         createButtons();
         createForm();
         verticalToolbar.getStyleClass().add("verticalToolbar");
-        verticalToolbar.getItems().addAll(addStudentButton, removeLastStudentButton, leaveStudentsCnt, requiredAVGPoint, solveButton);
+        verticalToolbar.getItems().addAll(addStudentButton, removeLastStudentButton, addStudentsFromFileButton, labelForLeaveStudentsCnt, leaveStudentsCnt, labelForRequiredAVGPoint, requiredAVGPoint, solveButton);
     }
 
     // form initializer
     private void createForm() {
         leaveStudentsCnt = new Spinner<>();
         leaveStudentsCnt.setEditable(true);
-        leaveStudentsCnt.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 1));
-        requiredAVGPoint = new TextField();
+        leaveStudentsCnt.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 30));
+        labelForLeaveStudentsCnt = new Label("Leave students");
+        labelForLeaveStudentsCnt.setLabelFor(leaveStudentsCnt);
+        requiredAVGPoint = new Spinner<>();
+        requiredAVGPoint.setEditable(true);
+        requiredAVGPoint.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 50));
+        labelForRequiredAVGPoint = new Label("Required AVG point");
+        labelForLeaveStudentsCnt.setLabelFor(requiredAVGPoint);
     }
 
     // buttons creating
@@ -113,6 +122,7 @@ public class MyView {
         addStudentButton = new Button("Add student");
         removeLastStudentButton = new Button("Remove last student");
         solveButton = new Button("Expel students");
+        addStudentsFromFileButton = new Button("Add students from file");
     }
 
     // input and output VBox initializer
